@@ -12,6 +12,7 @@ int main(void) {
     srand(time(NULL));
 
     while (1) {
+        
         medTemp = obterTemperatura();
         medUmid = obterUmidade();
         apresentarMedicoes(medTemp, medUmid);
@@ -19,7 +20,11 @@ int main(void) {
         posicao = obterPosicaoGeografica();
         exibirPosicaoGeografica(posicao);
 
-        sleep(1); // Aguarda 1 segundo
+        // Apresenta os novos sensores simulados
+        apresentarNovosSensores();
+
+        sleep(2); // Aguarda 2 segundos para visualização dos dados
+        printf("-----------------------------\n");
     }
 
     return 0;

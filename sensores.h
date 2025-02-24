@@ -23,4 +23,24 @@ typedef struct {
 PosicaoGeografica obterPosicaoGeografica(void);
 void exibirPosicaoGeografica(PosicaoGeografica pos);
 
+// Novos sensores
+
+// Sensor de som: retorna nível em decibéis (dB)
+float obterNivelSom(void);
+// Sensor de movimento: retorna 1 se movimento detectado, 0 caso contrário
+int detectarMovimento(void);
+// Detector de chama: retorna 1 se chama detectada, 0 caso contrário
+int detectarChama(void);
+// Sensor de luminosidade: retorna valor em lux
+float obterLuminosidade(void);
+
+// Funções de exibição dos novos sensores
+void mostrarNivelSom(float nivelSom);
+void mostrarMovimento(int movimento);
+void mostrarChama(int chama);
+void mostrarLuminosidade(float luminosidade);
+
+// Função que agrupa a apresentação dos novos sensores
+void apresentarNovosSensores(void);
+
 #endif // MEDICOES_H
