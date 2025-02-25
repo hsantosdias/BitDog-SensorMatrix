@@ -5,6 +5,11 @@
 #include "sensores.h"
 
 int main(void) {
+
+    // Configura o terminal para exibir corretamente caracteres especiais (UTF-8)
+    system("chcp 65001>NULL");
+
+    // Variáveis para medições de temperatura e umidade
     float medTemp, medUmid;
     PosicaoGeografica posicao;
 
