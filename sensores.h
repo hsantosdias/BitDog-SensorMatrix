@@ -1,5 +1,5 @@
-#ifndef MEDICOES_H
-#define MEDICOES_H
+#ifndef SENSORES_H
+#define SENSORES_H
 
 // Funções de medição e exibição de temperatura e umidade
 float obterTemperatura(void);
@@ -23,7 +23,11 @@ typedef struct {
 PosicaoGeografica obterPosicaoGeografica(void);
 void exibirPosicaoGeografica(PosicaoGeografica pos);
 
-// Novos sensores
+// Funções auxiliares
+float limitar(float valor, float min, float max);
+float variacaoAleatoria(float base, float variacao);
+
+// Sensores ambientais
 
 // Sensor de som: retorna nível em decibéis (dB)
 float obterNivelSom(void);
@@ -34,13 +38,13 @@ int detectarChama(void);
 // Sensor de luminosidade: retorna valor em lux
 float obterLuminosidade(void);
 
-// Funções de exibição dos novos sensores
+// Funções de exibição dos sensores
 void mostrarNivelSom(float nivelSom);
 void mostrarMovimento(int movimento);
 void mostrarChama(int chama);
 void mostrarLuminosidade(float luminosidade);
 
-// Função que agrupa a apresentação dos novos sensores
+// Função que agrupa a apresentação dos sensores
 void apresentarNovosSensores(void);
 
-#endif // MEDICOES_H
+#endif // SENSORES_H
